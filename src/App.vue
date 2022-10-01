@@ -21,6 +21,7 @@
       v-if="state.username === '' || state.username === null"
       class="container"
     >
+      <h1>Text you</h1>
       <div class="form-container">
         <form @submit.prevent="Login">
           <p>Welcome</p>
@@ -140,7 +141,7 @@ export default {
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Poppins&display=swap");
 
 * {
   position: relative;
@@ -154,10 +155,18 @@ export default {
 
   .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     min-height: 100vh;
     align-items: center;
     background: linear-gradient(to left, #283593, #1976d2);
+
+    h1 {
+      font-family: "Passions Conflict", sans-serif;
+      margin-bottom: 4rem;
+      color: #fff;
+      font-size: 49px;
+    }
 
     .form-container {
       width: 100%;
@@ -451,6 +460,20 @@ export default {
         input {
           &[type="submit"] {
             width: 60%;
+          }
+        }
+      }
+    }
+  }
+  .chat {
+    .chat-box {
+      .message {
+        .message-inner {
+          .username {
+            font-size: 12px;
+          }
+          .content {
+            font-size: 14px;
           }
         }
       }

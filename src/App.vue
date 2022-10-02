@@ -30,7 +30,7 @@
             v-model="inputUsername"
             placeholder="Please enter your username..."
           /><br />
-          <input type="password" placeholder="Password" /><br />
+          <!-- <input type="password" placeholder="Password" /><br /> -->
           <input type="submit" value="Sign in" /><br />
           <!-- <a href="#">Forgot Password?</a> -->
         </form>
@@ -163,7 +163,7 @@ export default {
 
     h1 {
       font-family: "Passions Conflict", sans-serif;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
       color: #fff;
       font-size: 49px;
     }
@@ -466,6 +466,14 @@ export default {
     }
   }
   .chat {
+    header {
+      h1 {
+        font-size: 15px;
+      }
+      .logout {
+        font-size: 15px;
+      }
+    }
     .chat-box {
       .message {
         .message-inner {
@@ -475,6 +483,15 @@ export default {
           .content {
             font-size: 14px;
           }
+        }
+      }
+    }
+
+    footer {
+      form {
+        input[type="submit"],
+        input[type="text"] {
+          font-size: 14px;
         }
       }
     }
